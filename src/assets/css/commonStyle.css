@@ -1,0 +1,29 @@
+/* NOrmaliztion */
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+*,h1,h2,h3,h4,h5,h6,p{
+margin: 0 ;
+padding: 0;
+}
+.px-5 { padding-left: 3rem ; padding-right: 3rem ; }
+.py-3 { padding-top: 1rem ; padding-bottom: 1rem ; }
+.clearfix{
+    clear: both;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.d-grid{
+    display: grid;
+}
+.d-flex{
+    display: flex;
+}
+.pull-right{
+    float: right;
+}

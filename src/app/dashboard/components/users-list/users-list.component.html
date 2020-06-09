@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="text-right add--btn">
+        <a class="btn btn--blue" routerLink="/dashboard/add">Add User</a>
+    </div>
+    <div class="row users-list">
+            <div class="col-md-4" *ngFor="let user of usersList">
+                <div class="user-card">
+                    <a [routerLink]="['/dashboard/user',user.id]">
+                        <img src="{{user.avatar}}" class="user-card--img" alt="userImg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <app-pagination
+        *ngIf="usersList.length"
+        [pageNum]="pageNum"
+        [total]="total"
+        (currentPageNum)="getUsersList($event)"></app-pagination>
+    </div>

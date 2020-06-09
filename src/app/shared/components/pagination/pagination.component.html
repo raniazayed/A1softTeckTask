@@ -1,0 +1,24 @@
+<div class="pagination">
+  <div class="pagination__controllers pull-right">
+    <img 
+      (click)="paginate(pageNum - 1)"
+      *ngIf="pageNum !== 0"
+      src="assets/images/left-arrow.svg" 
+      alt="left arrow"
+      class="pagination__img">
+    <div
+      (click)="paginate(number)"
+      class="pagination__number"
+      [class.pagination__number--active]="number === pageNum"
+      *ngFor="let number of countList">
+      {{ number + 1 }}
+    </div>
+    <img 
+      (click)="paginate(pageNum + 1)"
+      *ngIf="(pageNum + 1) !== totalPages"
+      src="assets/images/right-arrow.svg"
+      alt="right arrow"
+      class="pagination__img">
+  </div>
+  <div class="clearfix"></div>
+</div>

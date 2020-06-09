@@ -1,0 +1,49 @@
+<!-- LOgin FoRm -->
+<div class="login-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="loginForm-box">
+                <div class="logo__container">
+                    <img src=".././../../assets/images/A1Logo.svg" class="logo__container--img" alt="">
+                </div>
+                <h1 class="text-center loginForm--heading"> {{ __.signIn }}</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="form-group">
+                        <input type="text" [tabIndex]=1 class="inputfield__email" placeholder="Enter your email" formControlName="email">
+                        <label class="" for="email">{{__.email}}</label>
+                        <div *ngIf="(form.email.touched && form.email.errors)" class="error-msg">
+                            <div *ngIf="form.email.errors.required">{{__.requiredField}}</div>
+                            <div *ngIf="form.email.errors.pattern">{{__.emailPattern}}</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input class="inputfield__password position-relative"  placeholder="Enter your password" type="password" #password [tabIndex]=2 
+                        formControlName="password">
+                        <label class="" for="password">{{__.password}}</label>
+                        <div (click)="password.type = password.type == 'password' ? 'text' : 'password'"
+                            class="show-password">{{ password.type == 'password' ? __.show : __.hide }}
+                        </div>
+                        <div *ngIf="(form.password.touched && form.password.errors)" class="error-msg">
+                            <div *ngIf="form.password.errors.required">{{__.requiredField}}</div>
+                            <div *ngIf="form.password.errors.pattern">{{__.passwordPattern}}</div>
+                        </div>
+                    </div>
+                    <div class="form-check rememberMe">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+
+                    </div>
+                    <div class="login--btn-container text-center">
+                        <button [ngClass]="{'btn--disabled': loading  || loginForm.invalid}"
+                            class="btn btn--blue-transparent login--btn" [disabled]="loginForm.invalid" [tabIndex]=3>
+                            {{ __.login }}
+                        </button>
+                    </div>
+                    <div class="forgotPassword text-center">
+                        <a routerLink="/forgotPassword" class="forgotPassword-link">{{ __.forgotPassword }}</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

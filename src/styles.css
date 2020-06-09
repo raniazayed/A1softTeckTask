@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import './vendors/css/bootstrap-grid.min.css';
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Common Styles */
+@import './assets/css/commonStyle.css';
+@import './assets/css/abc-btn.css';
+@import './assets/css/abc-input.css';
+@import './assets/css/abc-checkbox.css';
+
+html
+{
+  font-size: 14px;
+} 
+body{
+    font-size: 14px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #24292d;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}

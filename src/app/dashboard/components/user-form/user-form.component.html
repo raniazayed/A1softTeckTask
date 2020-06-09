@@ -1,0 +1,35 @@
+<app-header></app-header>
+<!-- add,edit FoRm -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="user-form__box">
+                <h1 class="text-center userForm--heading" *ngIf="!edit"> {{ __.addUser }}</h1>
+                <h1 class="text-center userForm--heading" *ngIf="edit"> {{ __.editUser }}</h1>
+                <form [formGroup]="userForm" (ngSubmit)="addUser()">
+                    <div class="form-group">
+                        <label class="input-label" for="name">{{__.name}}</label>
+                        <input type="text" [tabIndex]=1 class="input-style" formControlName="name" placeholder="Enter your name">
+                        <div *ngIf="(form.name.touched && form.name.errors)" class="error-msg">
+                            <div *ngIf="form.name.errors.required">{{__.requiredField}}</div>
+                            <div *ngIf="form.name.errors.pattern">{{__.wrongFormat}}</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="input-label" for="job">{{__.job}}</label>
+                        <input type="text" [tabIndex]=2 class="input-style" formControlName="job" placeholder="Enter your job">
+                        <div *ngIf="(form.job.touched && form.job.errors)" class="error-msg">
+                            <div *ngIf="form.job.errors.required">{{__.requiredField}}</div>
+                            <div *ngIf="form.job.errors.pattern">{{__.wrongFormat}}</div>
+                        </div>
+                    </div>
+                   
+                    <div class="text-center">
+                        <button [ngClass]="{'btn--disabled': loading  || userForm.invalid}"
+                            class="btn btn--blue" [disabled]="userForm.invalid" [tabIndex]=3>
+                            {{ __.save }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

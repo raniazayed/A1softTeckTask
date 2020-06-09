@@ -1,0 +1,56 @@
+.user-details__box{
+    /* min-height: 370px; */
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(41,34,41,.17), 0 0 10px 0 rgba(65,61,131,.16);
+    background-color: #fff;
+    padding: 20px 24px;
+    font-size: .9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.avatar{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+}
+.avatar--img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.userInfo h5{
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+.userInfo p{
+  color:#777c87
+}
+.edit--btn,.delete--btn{
+    color: #0d3ccc;
+    font-size: .9rem;
+    text-decoration: none;
+    background: 0 0!important;
+    border: none;
+    padding: 0!important;
+    cursor: pointer;
+}
+.edit--btn{
+    margin-right: 5px;
+}
+.edit--btn__container{
+    flex: 1;
+    text-align: right;
+}
+.userActions{
+    margin-bottom: 10px;
+}
+.userActions__subheading{
+    font-weight: 500;
+}

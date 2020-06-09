@@ -1,0 +1,16 @@
+.user-form__box{
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(41,34,41,.17), 0 0 10px 0 rgba(65,61,131,.16);
+    background-color: #fff;
+    padding: 20px 24px;
+    font-size: .9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.userForm--heading{
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+    color: #24292d;
+}
