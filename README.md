@@ -4,10 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 It's a small dashboard for adding employees as small HR system.
 
 ## Installation
-Run `git clone https://github.com/raniazayed/A1softTeckTask.git`. 
-Run `npm install`.
-then Run `ng serve`.
-
+Run `
+git clone https://github.com/raniazayed/A1softTeckTask.git.
+npm install
+ng serve
+`
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
