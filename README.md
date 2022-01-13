@@ -5,10 +5,11 @@ It's a small dashboard for adding employees as small HR system.
 
 ## Installation
 Run `
-git clone https://github.com/raniazayed/A1softTeckTask.git.
-npm install
-ng serve
-`
+git clone https://github.com/raniazayed/A1softTeckTask.git.`
+Run `npm install`
+and then Run
+`ng serve`.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
